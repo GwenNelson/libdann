@@ -1,0 +1,22 @@
+#ifndef __TEMPLATE_H_
+#define __TEMPLATE_H_
+
+// STL stuff here
+#include <map>
+#include <set>
+
+// local includes here
+
+
+// any "using namespace" lines here
+
+
+// namespaces should match directory structure
+namespace dann {
+namespace misc {
+  template <class C>
+  class ClassName {
+  };
+
+}}
+#endif
