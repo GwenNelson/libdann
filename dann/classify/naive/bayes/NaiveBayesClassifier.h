@@ -12,9 +12,9 @@ namespace bayes {
   class INaiveBayesClassifier : public INaiveClassifier<I, F, C> {
      public:
        virtual ~INaiveBayesClassifier() { }
-       virtual C classification(I item, bool useThreshold) = 0;
-       virtual double getCategoryThreshold(C category) = 0;
-       virtual void setCategoryThreshold(C category, double threshold) = 0;
+       virtual C classification(I item, bool useThreshold) { return C(); };
+       virtual double getCategoryThreshold(C category) { return 0; };
+       virtual void setCategoryThreshold(C category, double threshold) { };
   };
 
 }}}}

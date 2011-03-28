@@ -13,7 +13,7 @@ namespace classify {
    class ILanguageClassifier  : public IClassifier<std::string, C> { 
       public:
         virtual ~ILanguageClassifier() { }
-        virtual Locale getLocale() = 0;
+        virtual Locale getLocale() { return Locale(); };
    };
 }}
 #endif

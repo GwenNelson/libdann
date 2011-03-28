@@ -10,10 +10,10 @@ namespace naive {
   class INaiveClassifier : public IClassifier<I, C> {
      public:
        virtual ~INaiveClassifier() { }
-       virtual C featureClassification(F feature);
-       virtual C featureClassificationWeighted(F feature);
-       virtual double featureClassificationProbability(F feature, C category);
-       virtual double featureClassificationWeightedProbability(F feature, C category);
+       virtual C featureClassification(F feature) { return C(); };
+       virtual C featureClassificationWeighted(F feature) { return C(); };
+       virtual double featureClassificationProbability(F feature, C category) { return 0; };
+       virtual double featureClassificationWeightedProbability(F feature, C category) { return 0; };
   };
 
 }}}

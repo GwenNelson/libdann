@@ -6,7 +6,7 @@ namespace classify {
   class ITrainable {
      public:
        virtual ~ITrainable() { }
-       virtual void train(I item, C category) = 0;
+       virtual void train(I item, C category) { };
   };
 
 }}

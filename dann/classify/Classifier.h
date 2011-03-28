@@ -9,10 +9,10 @@ namespace classify {
   class IClassifier {
      public:
        virtual ~IClassifier() { }
-       virtual C classification(I item) = 0;
-       virtual std::map<C,double> getCategoryProbabilities(I item) = 0;
-       virtual double classificationProbability(I item, C category) = 0;
-       virtual std::set<C> getCategories() = 0;
+       virtual C classification(I item) { return C(); };
+       virtual std::map<C,double> getCategoryProbabilities(I item) { return std::map<C,double>(); };
+       virtual double classificationProbability(I item, C category) { return 0; };
+       virtual std::set<C> getCategories() { return std::set<C>(); };
   };
 
 }}

@@ -5,7 +5,7 @@
 using namespace dann::classify::naive::bayes;
 
 int main(int argc, char** argv) {
-    ITrainableLanguageNaiveBayesClassifier<int> &classifier = new StemmingLanguageNaiveBayesClassifier<int>();
+    ITrainableLanguageNaiveBayesClassifier<int> classifier = StemmingLanguageNaiveBayesClassifier<int>();
 
     classifier.train(std::string("Money is the root of all evil!"), 1);
     classifier.train(std::string("Money destroys the soul"), 1);
@@ -27,6 +27,5 @@ int main(int argc, char** argv) {
     assert(classifier.classification(std::string("Money destroys the quick brown fox!")) == 1);
     assert(classifier.classification(std::string("kills the soul")) == 1);
     assert(classifier.classification(std::string("nonsense is the root of good")) == 2);
-    delete classifier;
     return 0;
 }
